@@ -1,0 +1,40 @@
+body {
+  padding-top: 50px;
+}
+
+#create-user{
+	width: 300px;
+	text-align: center;
+}
+
+li p, li input{
+	display: inline-block;
+}
+.minion{
+	height:100px;
+	width: 100px;
+	border-radius: 50px;
+	border: 3px solid black;
+	margin: 20px 10px;
+
+}
+
+.box{
+	text-align: center;
+	border: 3px solid black;
+	width: 175px;
+	display: inline-block;
+	vertical-align: top;
+	margin:8px;
+	padding:3px;
+}
+
+.card-front{
+	height: 200px;
+}
+.card-back{
+	border: 1px solid black;
+	padding:3px;
+	height: 200px;
+
+}

@@ -1,0 +1,147 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jquery Practice: Prejct 2</title>
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  	<script type="text/javascript">
+      $(document).ready(function(){
+
+          $('.card-back').hide();
+
+          $(document).on('mouseenter', '.minion', function(){
+            $(this).css('border', '4px solid blue')
+          });
+          $(document).on('mouseleave', '.minion' ,function(){
+            $(this).css('border', '3px solid black')
+          });
+         
+          $('#user-dropdown').click(function(){
+            $('#create-user').slideToggle();  
+         }); 
+
+          $('#btn-create-user').click(function(){
+              var first = $('input:eq(0)').val();
+              var last = $('input:eq(1)').val();
+              var description = $('input:eq(2)').val();
+
+              $('#contact-container').append('<div class="box"> <div class="card-front"> <img class="minion" src="minion1.jpg"> <h5 class="name">' + first + '</h5> <h5 class="name">' + last + '</h5> </div> <div class="card-back"> <h5>Details</h5> <p>' + description + '</p> </div> </div>')
+              $('.card-back:last').hide();
+
+          });
+
+          $(document).on('click', '.box', function(){
+            $(this).children('.card-front').slideToggle('slow');
+            $(this).children('.card-back').slideToggle('slow');
+          });
+                        
+
+      });
+      
+  	</script>
+  </head>
+
+  <body>
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Project name</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="#">Home</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Create New User <span class="caret"></span></a>
+              <ul id="create-user" class="dropdown-menu">
+                <li><img class="minion" src="minion1.jpg"><img class="minion" src="minion2.jpg"></li>
+                <li><p>First Name: </p><input type="text" name="first_name"></li>
+                <li><p>Last Name: </p><input type="text" name="last_name"></li>
+                <li><p>Description: </p><input type="text" name="description"></li>
+                <li role="separator" class="divider"></li>
+                <li><button id="btn-create-user" class="btn-primary">Create Contact!</button></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <div id="contact-container" class="col-xs-12">
+          <div class="box">
+            <div class="card-front">
+              <img class="minion" src="minion1.jpg">
+              <h5 class="name">First</h5>
+              <h5 class="name">Last</h5>
+            </div>
+            <div class="card-back">
+              <h5>Details</h5>
+              <p>This is the description, it has words words words words</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-front">
+              <img class="minion" src="minion1.jpg">
+              <h5 class="name">First</h5>
+              <h5 class="name">Last</h5>
+            </div>
+            <div class="card-back">
+              <h5>Details</h5>
+              <p>This is the description, it has words words words words</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-front">
+              <img class="minion" src="minion1.jpg">
+              <h5 class="name">First</h5>
+              <h5 class="name">Last</h5>
+            </div>
+            <div class="card-back">
+              <h5>Details</h5>
+              <p>This is the description, it has words words words words</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-front">
+              <img class="minion" src="minion1.jpg">
+              <h5 class="name">First</h5>
+              <h5 class="name">Last</h5>
+            </div>
+            <div class="card-back">
+              <h5>Details</h5>
+              <p>This is the description, it has words words words words</p>
+            </div>
+          </div>
+          <div class="box">
+            <div class="card-front">
+              <img class="minion" src="minion1.jpg">
+              <h5 class="name">First</h5>
+              <h5 class="name">Last</h5>
+            </div>
+            <div class="card-back">
+              <h5>Details</h5>
+              <p>This is the description, it has words words words words</p>
+            </div>
+          </div>
+        </div>  
+      </div>
+    </div><!-- /.container -->
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+  </body>
+</html>
